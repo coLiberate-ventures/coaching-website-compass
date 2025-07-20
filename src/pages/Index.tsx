@@ -1,11 +1,20 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import ProfileCard from "@/components/ProfileCard";
+import TestimonialOrbit from "@/components/TestimonialOrbit";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-white overflow-hidden flex items-center justify-center relative font-inter">
+      <ProfileCard />
+      <TestimonialOrbit />
+      
+      {/* Mobile responsive view */}
+      <div className="md:hidden absolute inset-0 overflow-y-auto p-5">
+        <div className="mb-10">
+          <ProfileCard />
+        </div>
+        <div className="grid gap-4">
+          {/* Mobile testimonials would go here if needed */}
+        </div>
       </div>
     </div>
   );

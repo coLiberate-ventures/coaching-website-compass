@@ -18,6 +18,23 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+			},
+			animation: {
+				'rotate': 'rotate 180s linear infinite',
+				'counter-rotate': 'counter-rotate 180s linear infinite',
+			},
+			keyframes: {
+				'rotate': {
+					'from': { transform: 'translate(-50%, -50%) rotate(0deg)' },
+					'to': { transform: 'translate(-50%, -50%) rotate(360deg)' },
+				},
+				'counter-rotate': {
+					'from': { transform: 'translate(-50%, -50%) rotate(0deg)' },
+					'to': { transform: 'translate(-50%, -50%) rotate(-360deg)' },
+				},
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
